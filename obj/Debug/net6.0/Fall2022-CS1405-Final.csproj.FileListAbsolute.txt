@@ -1,0 +1,15 @@
+C:\Users\shane.esplin\CS_1405_Labs\CS_1405_Labs\Fall2022-CS1405-Final\bin\Debug\net6.0\Fall2022-CS1405-Final.exe
+C:\Users\shane.esplin\CS_1405_Labs\CS_1405_Labs\Fall2022-CS1405-Final\bin\Debug\net6.0\Fall2022-CS1405-Final.deps.json
+C:\Users\shane.esplin\CS_1405_Labs\CS_1405_Labs\Fall2022-CS1405-Final\bin\Debug\net6.0\Fall2022-CS1405-Final.runtimeconfig.json
+C:\Users\shane.esplin\CS_1405_Labs\CS_1405_Labs\Fall2022-CS1405-Final\bin\Debug\net6.0\Fall2022-CS1405-Final.dll
+C:\Users\shane.esplin\CS_1405_Labs\CS_1405_Labs\Fall2022-CS1405-Final\bin\Debug\net6.0\ref\Fall2022-CS1405-Final.dll
+C:\Users\shane.esplin\CS_1405_Labs\CS_1405_Labs\Fall2022-CS1405-Final\bin\Debug\net6.0\Fall2022-CS1405-Final.pdb
+C:\Users\shane.esplin\CS_1405_Labs\CS_1405_Labs\Fall2022-CS1405-Final\obj\Debug\net6.0\Fall2022-CS1405-Final.csproj.AssemblyReference.cache
+C:\Users\shane.esplin\CS_1405_Labs\CS_1405_Labs\Fall2022-CS1405-Final\obj\Debug\net6.0\Fall2022-CS1405-Final.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\shane.esplin\CS_1405_Labs\CS_1405_Labs\Fall2022-CS1405-Final\obj\Debug\net6.0\Fall2022-CS1405-Final.AssemblyInfoInputs.cache
+C:\Users\shane.esplin\CS_1405_Labs\CS_1405_Labs\Fall2022-CS1405-Final\obj\Debug\net6.0\Fall2022-CS1405-Final.AssemblyInfo.cs
+C:\Users\shane.esplin\CS_1405_Labs\CS_1405_Labs\Fall2022-CS1405-Final\obj\Debug\net6.0\Fall2022-CS1405-Final.csproj.CoreCompileInputs.cache
+C:\Users\shane.esplin\CS_1405_Labs\CS_1405_Labs\Fall2022-CS1405-Final\obj\Debug\net6.0\Fall2022-CS1405-Final.dll
+C:\Users\shane.esplin\CS_1405_Labs\CS_1405_Labs\Fall2022-CS1405-Final\obj\Debug\net6.0\ref\Fall2022-CS1405-Final.dll
+C:\Users\shane.esplin\CS_1405_Labs\CS_1405_Labs\Fall2022-CS1405-Final\obj\Debug\net6.0\Fall2022-CS1405-Final.pdb
+C:\Users\shane.esplin\CS_1405_Labs\CS_1405_Labs\Fall2022-CS1405-Final\obj\Debug\net6.0\Fall2022-CS1405-Final.genruntimeconfig.cache
