@@ -5,7 +5,7 @@ using System;
 
 class program
 {
-    static avoid Main()
+    static void Main()
     {
         Console.WriteLine("Hello. This program helps a DM to make a random encounter for their group.");
         Console.WriteLine("If you enter in the number of players in the group, the average ecl of the group, and the environment the group is in,");
