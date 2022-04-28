@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\shane.esplin\\CS_1405_Labs\\CS_1405_Labs\\Fall2022-CS1405-Final\\Fall2022-CS1405-Final.csproj",
+      "projectUniqueName": "C:\\Users\\shane.esplin\\CS1405Final\\Fall2022-CS1405-Final\\Fall2022-CS1405-Final.csproj",
       "projectName": "Fall2022-CS1405-Final",
-      "projectPath": "C:\\Users\\shane.esplin\\CS_1405_Labs\\CS_1405_Labs\\Fall2022-CS1405-Final\\Fall2022-CS1405-Final.csproj",
+      "projectPath": "C:\\Users\\shane.esplin\\CS1405Final\\Fall2022-CS1405-Final\\Fall2022-CS1405-Final.csproj",
       "packagesPath": "C:\\Users\\shane.esplin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\shane.esplin\\CS_1405_Labs\\CS_1405_Labs\\Fall2022-CS1405-Final\\obj\\",
+      "outputPath": "C:\\Users\\shane.esplin\\CS1405Final\\Fall2022-CS1405-Final\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
