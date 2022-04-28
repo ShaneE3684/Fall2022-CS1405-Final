@@ -1,0 +1,447 @@
+﻿Aboleth::7 Underground
+Achaierai::5 Lawful-Planes
+Allip::3 Any
+Angle, Astral Deva::14 Good-Planes
+Angel, Planetar::16 Good-Planes
+Angel, Solar::23 Good-Planes
+Animated Object, Tiny::0.5 Any
+Animated Object, Small::1 Any
+Animated Object, Medium::2 Any
+Animated Object, Large::3 Any
+Animated Object, Huge::5 Any
+Animated Object, Gargantuan::7 Any
+Animated Object, Colossal::10 Any
+Ankheg::3 Warm-Plains
+Aranea::4 Temperate-Forests
+Archon, Lantern::2 Lawful-Good-Planes
+Archon, Hound::4 Lawful-Good-Planes
+Archon,Trumpet::14 Lawful-Good-Planes
+Arrowhawk, Juvenile::3 Air-Plane
+Arrowhawk, Adult::5 Air-Plane
+Arrowhawk, Elder::8 Air-Plane
+Assassin Vine::3 Temperate-Forests
+Athach::8 Temperate-Hills
+Avoral::9 Good-Planes
+Azer::2 Fire-Plane
+Barghest::4 Evil-Planes
+Barghest, Greater::5 Evil-Planes
+Basilisk::5 Warm-Desserts
+Behir::8 Warm-Hills
+Belker::6 Air-Plane
+Blink Dog::2 Temperate-Plains
+Bodak::8 Chaotic-Evil-Planes
+Bralani::6 Chaotic-Good-Planes
+Bugbear::2 Temperate-Mountains
+Bulette::7 Temperate-Hills
+Centaur::3 Temperate-Forests
+Chaos Beast::7 Limbo
+Chimera::7 Temperate-Hills
+Choker::2 Underground
+Chuul::7 Temperate-Marshes
+Cloaker::5 Underground
+Cockatrice::3 Temperate-Plains
+Couatl::10 Warm-Forests
+Darkmantle::1 Underground
+Delver::9 Underground
+Demon, Babau::6 Chaotic-Evil-Planes
+Demon, Balor::20 Chaotic-Evil-Planes
+Demon, Bebilith::10 Chaotic-Evil-Planes
+Demon, Dretch::2 Chaotic-Evil-Planes
+Demon, Glabrezu::13 Chaotic-Evil-Planes
+Demon, Hezrou::11 Chaotic-Evil-Planes
+Demon, Marilith::17 Chaotic-Evil-Planes
+Demon, Nalfeshnee::14 Chaotic-Evil-Planes
+Demon, Quasit::2 Chaotic-Evil-Planes
+Demon, Retriever::11 Chaotic-Evil-Planes
+Demon, Succubus::7 Chaotic-Evil-Planes
+Demon, Vrock::9 Chaotic-Evil-Planes
+Derro::3 Underground
+Destrachan::8 Underground
+Devil, Barbed (Hamatula)::11 Lawful-Evil-Planes
+Devil, Bearded (Barbazu)::5 Lawful-Evil-Planes
+Devil, Bone (Osyluth)::9 Lawful-Evil-Planes
+Devil, Chain (Kyton)::6 Lawful-Evil-Planes
+Devil, Erinyes::8 Lawful-Evil-Planes
+Devil, Hellcat (Bezekira)::7 Lawful-Evil-Planes
+Devil, Horned (Cornugon)::16 Lawful-Evil-Planes
+Devil, Ice (Gelugon)::13 Lawful-Evil-Planes
+Devil, Imp::2 Lawful-Evil-Planes
+Devil, Lemure::1 Lawful-Evil-Planes
+Devil, Pit Fiend::20 Lawful-Evil-Planes
+Devourer::11 Any
+Digester::6 Warm-Forests
+Dinosaur, Deinonychus::3 Warm-Forests
+Dinosaur, Elasmosaurus::7 Warm-Aquatic
+Dinosaur, Megaraptor::6 Warm-Forests
+Dinosaur, Triceratops::9 Temperate-Plains
+Dinosaur, Tyrannosaurus::8 Warm-Plains
+Dire Ape::3 Warm-Forests
+Dire Badger::2 Temperate-Forests
+Dire Bat::2 Temperate-Deserts
+Dire Bear::7 Cold-Forests
+Dire Boar::4 Temperate-Forests
+Dire Lion::5 Warm-Plains
+Dire Rat::0.333333 Any
+Dire Shark::9 Cold-Aquatic
+Dire Tiger::8 Warm-Forests
+Dire Weasel::2 Temperate-Hills
+Dire Wolf::3 Temperate-Forests
+Dire Wolverine::4 Cold-Forests
+Doppelganger::3 Any
+Dragon, Black, Wyrmling::3 Warm-Marshes
+Dragon, Black, Very Young::4 Warm-Marshes
+Dragon, Black, Young::5 Warm-Marshes
+Dragon, Black, Juvenile::7 Warm-Marshes
+Dragon, Black, Young Adult::9 Warm-Marshes
+Dragon, Black, Adult::11 Warm-Marshes
+Dragon, Black, Mature Adult::14 Warm-Marshes
+Dragon, Black, Old::16 Warm-Marshes
+Dragon, Black, Very Old::18 Warm-Marshes
+Dragon, Black, Ancient::19 Warm-Marshes
+Dragon, Black, Wyrm::20 Warm-Marshes
+Dragon, Black, Great Wyrm::22 Warm-Marshes
+Dragon, Blue, Wyrmling::3 Temperate-Deserts
+Dragon, Blue, Very Young::4 Temperate-Deserts
+Dragon, Blue, Young::6 Temperate-Deserts
+Dragon, Blue, Juvenile::8 Temperate-Deserts
+Dragon, Blue, Young Adult::11 Temperate-Deserts
+Dragon, Blue, Adult::14 Temperate-Deserts
+Dragon, Blue, Mature Adult::16 Temperate-Deserts
+Dragon, Blue, Old::18 Temperate-Deserts
+Dragon, Blue, Very Old::19 Temperate-Deserts
+Dragon, Blue, Ancient::21 Temperate-Deserts
+Dragon, Blue, Wyrm::23 Temperate-Deserts
+Dragon, Blue, Great Wyrm::25 Temperate-Deserts
+Dragon, Green, Wyrmling::3 Temperate-Forests
+Dragon, Green, Very Young::4 Temperate-Forests
+Dragon, Green, Young::5 Temperate-Forests
+Dragon, Green, Juvenile::8 Temperate-Forests
+Dragon, Green, Young Adult::11 Temperate-Forests
+Dragon, Green, Adult::13 Temperate-Forests
+Dragon, Green, Mature Adult::16 Temperate-Forests
+Dragon, Green, Old::18 Temperate-Forests
+Dragon, Green, Very Old::19 Temperate-Forests
+Dragon, Green, Ancient::21 Temperate-Forests
+Dragon, Green, Wyrm::22 Temperate-Forests
+Dragon, Green, Great Wyrm::24 Temperate-Forests
+Dragon, Red, Wyrmling::4 Warm-Mountains
+Dragon, Red, Very Young::5 Warm-Mountains
+Dragon, Red, Young::7 Warm-Mountains
+Dragon, Red, Juvenile::10 Warm-Mountains
+Dragon, Red, Young Adult::13 Warm-Mountains
+Dragon, Red, Adult::15 Warm-Mountains
+Dragon, Red, Mature Adult::18 Warm-Mountains
+Dragon, Red, Old::20 Warm-Mountains
+Dragon, Red, Very Old::21 Warm-Mountains
+Dragon, Red, Ancient::23 Warm-Mountains
+Dragon, Red, Wyrm::24 Warm-Mountains
+Dragon, Red, Great Wyrm::26 Warm-Mountains
+Dragon, White, Wyrmling::2 Cold-Mountains
+Dragon, White, Very Young::3 Cold-Mountains
+Dragon, White, Young::4 Cold-Mountains
+Dragon, White, Juvenile::6 Cold-Mountains
+Dragon, White, Young Adult::8 Cold-Mountains
+Dragon, White, Adult::10 Cold-Mountains
+Dragon, White, Mature Adult::12 Cold-Mountains
+Dragon, White, Old::15 Cold-Mountains
+Dragon, White, Very Old::17 Cold-Mountains
+Dragon, White, Ancient::18 Cold-Mountains
+Dragon, White, Wyrm::19 Cold-Mountains
+Dragon, White, Great Wyrm::21 Cold-Mountains
+Dragon, Brass, Wyrmling::3 Warm-Deserts
+Dragon, Brass, Very Young::4 Warm-Deserts
+Dragon, Brass, Young::6 Warm-Deserts
+Dragon, Brass, Juvenile::8 Warm-Deserts
+Dragon, Brass, Young Adult::10 Warm-Deserts
+Dragon, Brass, Adult::12 Warm-Deserts
+Dragon, Brass, Mature Adult::15 Warm-Deserts
+Dragon, Brass, Old::17 Warm-Deserts
+Dragon, Brass, Very Old::19 Warm-Deserts
+Dragon, Brass, Ancient::20 Warm-Deserts
+Dragon, Brass, Wyrm::21 Warm-Deserts
+Dragon, Brass, Great Wyrm::23 Warm-Deserts
+Dragon, Bronze, Wyrmling::3 Temperate-Hills
+Dragon, Bronze, Very Young::5 Temperate-Hills
+Dragon, Bronze, Young::7 Temperate-Hills
+Dragon, Bronze, Juvenile::9 Temperate-Hills
+Dragon, Bronze, Young Adult::12 Temperate-Hills
+Dragon, Bronze, Adult::15 Temperate-Hills
+Dragon, Bronze, Mature Adult::17 Temperate-Hills
+Dragon, Bronze, Old::19 Temperate-Hills
+Dragon, Bronze, Very Old::20 Temperate-Hills
+Dragon, Bronze, Ancient::22 Temperate-Hills
+Dragon, Bronze, Wyrm::23 Temperate-Hills
+Dragon, Bronze, Great Wyrm::25 Temperate-Hills
+Dragon, Copper, Wyrmling::3 Warm-Hills
+Dragon, Copper, Very Young::5 Warm-Hills
+Dragon, Copper, Young::7 Warm-Hills
+Dragon, Copper, Juvenile::9 Warm-Hills
+Dragon, Copper, Young Adult::11 Warm-Hills
+Dragon, Copper, Adult::14 Warm-Hills
+Dragon, Copper, Mature Adult::16 Warm-Hills
+Dragon, Copper, Old::19 Warm-Hills
+Dragon, Copper, Very Old::20 Warm-Hills
+Dragon, Copper, Ancient::22 Warm-Hills
+Dragon, Copper, Wyrm::23 Warm-Hills
+Dragon, Copper, Great Wyrm::25 Warm-Hills
+Dragon, Gold, Wyrmling::5 Warm-Plains
+Dragon, Gold, Very Young::7 Warm-Plains
+Dragon, Gold, Young::9 Warm-Plains
+Dragon, Gold, Juvenile::11 Warm-Plains
+Dragon, Gold, Young Adult::14 Warm-Plains
+Dragon, Gold, Adult::16 Warm-Plains
+Dragon, Gold, Mature Adult::19 Warm-Plains
+Dragon, Gold, Old::21 Warm-Plains
+Dragon, Gold, Very Old::22 Warm-Plains
+Dragon, Gold, Ancient::24 Warm-Plains
+Dragon, Gold, Wyrm::25 Warm-Plains
+Dragon, Gold, Great Wyrm::27 Warm-Plains
+Dragon, Silver, Wyrmling::4 Temperate-Mountains
+Dragon, Silver, Very Young::5 Temperate-Mountains
+Dragon, Silver, Young::7 Temperate-Mountains
+Dragon, Silver, Juvenile::10 Temperate-Mountains
+Dragon, Silver, Young Adult::13 Temperate-Mountains
+Dragon, Silver, Adult::15 Temperate-Mountains
+Dragon, Silver, Mature Adult::18 Temperate-Mountains
+Dragon, Silver, Old::20 Temperate-Mountains
+Dragon, Silver, Very Old::21 Temperate-Mountains
+Dragon, Silver, Ancient::23 Temperate-Mountains
+Dragon, Silver, Wyrm::24 Temperate-Mountains
+Dragon, Silver, Great Wyrm::26 Temperate-Mountains
+Dragon Turtle::9 Temperate-Aquatic
+Dragonne::7 Temperate-Deserts
+Drider::7 Underground
+Dryad::3 Temperate-Forests
+Eagle, Giant::3 Temperate-Mountains
+Elemental, Air, Small::1 Air-Plane
+Elemental, Air, Medium::3 Air-Plane
+Elemental, Air, Large::5 Air-Plane
+Elemental, Air, Huge::7 Air-Plane
+Elemental, Air, Greater::9 Air-Plane
+Elemental, Air, Elder::11 Air-Plane
+Elemental, Earth, Small::1 Earth-Plane
+Elemental, Earth, Medium::3 Earth-Plane
+Elemental, Earth, Large::5 Earth-Plane
+Elemental, Earth, Huge::7 Earth-Plane
+Elemental, Earth, Greater::9 Earth-Plane
+Elemental, Earth, Elder::11 Earth-Plane
+Elemental, Fire, Small::1 Fire-Plane
+Elemental, Fire, Medium::3 Fire-Plane
+Elemental, Fire, Large::5 Fire-Plane
+Elemental, Fire, Huge::7 Fire-Plane
+Elemental, Fire, Greater::9 Fire-Plane
+Elemental, Fire, Elder::11 Fire-Plane
+Elemental, Water, Small::1 Water-Plane
+Elemental, Water, Medium::3 Water-Plane
+Elemental, Water, Large::5 Water-Plane
+Elemental, Water, Huge::7 Water-Plane
+Elemental, Water, Greater::9 Water-Plane
+Elemental, Water, Elder::11 Water-Plane
+Ethereal Filcher::3 Underground
+Ethereal Marauder::3 Ethereal-Plane
+Ettercap::3 Warm-Forests
+Ettin::6 Cold-Hills
+Formian, Worker::0.5 Lawful-Planes
+Formian, Warrior::3 Lawful-Planes
+Formian, Taskmaster::7 Lawful-Planes
+Formian, Myrmarch::10 Lawful-Planes
+Formian, Queen::17 Lawful-Planes
+Frost Worm::12 Cold-Plains
+Fungus, Shrieker::1 Underground
+Fungus, Violet::3 Underground
+Gargoyle::4 Any
+Genie, Djinn::5 Air-Plane
+Genie, Djinn, Noble::8 Air-Plane
+Genie, Efreet::8 Fire-Plane
+Genie, Jann::4 Warm-Deserts
+Ghaele::13 Chaotic-Good-Planes
+Ghast::3 Any
+Ghoul::1 Any
+Giant, Cloud::11 Temperate-Mountains
+Giant, Fire::10 Warm-Mountains
+Giant, Frost::9 Cold-Mountains
+Giant, Frost, Jarl::17 Cold-Mountains
+Giant, Hill::7 Temperate-Hills
+Giant, Stone::8 Temperate-Mountains
+Giant, Stone, Elder::9 Temperate-Mountains
+Giant, Storm::13 Warm-Mountains
+Gibbering Mouther::5 Underground
+Girallon::6 Warm-Forests
+Gnoll::1 Warm-Plains
+Goblin::0.333333 Temperate-Plains
+Golem, Clay::10 Any
+Golem, Flesh::7 Any
+Golem, Iron::13 Any
+Golem, Stone::11 Any
+Golem, Stone, Greater::16 Any
+Gorgon::8 Temperate-Plains
+Gray Render::8 Temperate-Marshes
+Grick::3 Underground
+Griffon::4 Temperate-Hills
+Grimlock::1 Underground
+Hag, Annis::6 Cold-Marshes
+Hag, Green::5 Temperate-Forests
+Hag, Sea::4 Temperate-Aquatic
+Harpy::4 Temperate-Marshes
+Harpy, Archer::11 Temperate-Marshes
+Hellhound::3 Lawful-Evil-Planes
+Hellhound, Nessian Warhound::9 Lawful-Evil-Planes
+Hippogriff::2 Temperate-Hills
+Hobgoblin::0.5 Warm-Hills
+Homunculus::1 Any
+Howler::3 Chaotic-Planes
+Hydra, Five-Headed::4 Temperate-Marshes
+Hydra, Six-Headed::5 Temperate-Marshes
+Hydra, Seven-Headed::6 Temperate-Marshes
+Hydra, Eight-Headed::7 Temperate-Marshes
+Hydra, Nine-Headed::8 Temperate-Marshes
+Hydra, Ten-Headed::9 Temperate-Marshes
+Hydra, Eleven-Headed::10 Temperate-Marshes
+Hydra, Twelve-Headed::11 Temperate-Marshes
+Hydra, Five-Headed, Pyro::6 Warm-Marshes
+Hydra, Six-Headed, Pyro::7 Warm-Marshes
+Hydra, Seven-Headed, Pyro::8 Warm-Marshes
+Hydra, Eight-Headed, Pyro::9 Warm-Marshes
+Hydra, Nine-Headed, Pyro::10 Warm-Marshes
+Hydra, Ten-Headed, Pyro::11 Warm-Marshes
+Hydra, Eleven-Headed, Pyro::12 Warm-Marshes
+Hydra, Twelve-Headed, Pyro::13 Warm-Marshes
+Hydra, Five-Headed, Cryo::6 Cold-Marshes
+Hydra, Six-Headed, Cryo::7 Cold-Marshes
+Hydra, Seven-Headed, Cryo::8 Cold-Marshes
+Hydra, Eight-Headed, Cryo::9 Cold-Marshes
+Hydra, Nine-Headed, Cryo::10 Cold-Marshes
+Hydra, Ten-Headed, Cryo::11 Cold-Marshes
+Hydra, Eleven-Headed, Cryo::12 Cold-Marshes
+Hydra, Twelve-Headed, Cryo::13 Cold-Marshes
+Inevitable, Kolyarut::12 Lawful-Planes
+Inevitable, Marut::15 Lawful-Planes
+Inevitable, Zelekhut::9 Lawful-Planes
+Invisible Stalker::7 Air-Plane
+Kobold::0.25 Temperate-Forests
+Kraken::12 Temperate-Aquatic
+Krenshar::1 Temperate-Forests
+Lamia::6 Temperate-Deserts
+Lammasu::8 Temperate-Deserts
+Leonal::12 Good-Planes
+Lillend::7 Chaotic-Planes
+Lizardfolk::1 Temperate-Marshes
+Locathah::0.5 Warm-Aquatic
+Lycanthrope, Werebear::5 Cold-Forests
+Lycanthrope, Wereboar::4 Temperate-Forests
+Lycanthrope, Wererat::2 Any
+Lycanthrope, Weretiger::5 Warm-Forests
+Lycanthrope, Werewolf::3 Temperate-Forests
+Lycanthrope, Werewolf Lord::14 Temperate-Forests
+Magmin::3 Fire-Plane
+Manticore::5 Warm-Marshes
+Medusa::7 Temperate-Marshes
+Mephit, Air::3 Air-Plane
+Mephit, Dust::3 Air-Plane
+Mephit, Earth::3 Earth-Plane
+Mephit, Fire::3 Fire-Plane
+Mephit, Ice::3 Air-Plane
+Mephit, Magma::3 Fire-Plane
+Mephit, Ooze::3 Water-Plane
+Mephit, Salt::3 Earth-Plane
+Mephit, Steam::3 Fire-Plane
+Mephit, Water::3 Water-Plane
+Merfolk:0.5 Temperate-Aquatic
+Mimic::4 Underground
+Minotaur::4 Underground
+Mohrg::8 Any
+Mummy::5 Any
+Naga, Dark::8 Temperate-Hills
+Naga, Guardian::10 Temperate-Plains
+Naga, Spirit::9 Temperate-Marshes
+Naga, Water::7 Temperate-Aquatic
+Night Hag::9 Evil-Planes
+Nightmare::5 Evil-Planes
+Nightcrawler::18 Shadow-Plane
+Nightwalker::16 Shadow-Plane
+Nightwing::14 Shadow-Plane
+Nymph::7 Temperate-Forests
+Ogre::3 Temperate-Hills
+Ogre, Merrow::3 Temperate-Aquatic
+Ogre Barbarian::7 Temperate-Hills
+Ogre Mage::8 Cold-Hills
+Ooze, Black Pudding::7 Underground
+Ooze, Gelatinous Cube::3 Underground
+Ooze, Gray::4 Cold-Marshes
+Ooze, Ochre Jelly::5 Temperate-Marshes
+Orc::0.5 Temperate-Hills
+Otyugh::4 Underground
+Owl, Giant::3 Temperate-Forests
+Owlbear::4 Temperate-Forests
+Pegasus::3 Temperate-Forests
+Phantom Fungus::3 Underground
+Phase Spider::5 Warm-Hills
+Phasm::7 Underground
+Planetouched, Aasimar::0.5 Temperate-Plains
+Planetouched, Tiefling::0.5 Temperate-Plains
+Pseudodragon::1 Temperate-Forests
+Purple Worm::12 Underground
+Rakshasa::10 Warm-Marshes
+Rast::5 Fire-Plane
+Ravid::5 Positive-Energy-Plane
+Remorhaz::7 Cold-Deserts
+Roc::9 Warm-Mountains
+Roper::12 Underground
+Rust Monster::3 Underground
+Sahuagin::2 Warm-Aquatic
+Salamander, Flamebrother::3 Fire-Plane
+Salamander, Average::6 Fire-Plane
+Salamander, Noble::10 Fire-Plane
+Satyr::2 Temperate-Forests
+Sea Cat::4 Temperate-Aquatic
+Shadow::3 Any
+Shadow, Greater::8 Any
+Shadow Mastiff::5 Shadow-Plane
+Shambling Mound::6 Temperate-Marshes
+Shield Guardian::8 Any
+Shocker Lizard::2 Warm-Marshes
+Skum::2 Underground
+Spectre::7 Any
+Sphinx, Criosphinx::7 Warm-Deserts
+Sphinx, Gynosphinx::8 Warm-Deserts
+Sphinx, Hieracosphinx::5 Warm-Deserts
+Spider Eater::5 Temperate-Forests
+Sprite, Grig::1 Temperate-Forests
+Sprite, Nixie::1 Temperate-Aquatic
+Sprite, Pixie::4 Temperate-Forests
+Stirge::0.5 Warm-Marshes
+Swarm, Bats::2 Temperate-Deserts
+Swarm, Centipede::4 Underground
+Swarm, Hellwasp::8 Evil-Planes
+Swarm, Locust::3 Temperate-Plains
+Swarm, Rat::2 Any
+Swarm, Spider::1 Warm-Forest
+Tarrasque::20 Any
+Tendriculos::6 Temperate-Forests
+Thoqqua::2 Fire-Plane
+Titan::21 Chaotic-Good-Planes
+Tojanida, Juvenile::3 Water-Plane
+Tojanida, Adult::5 Water-Plane
+Tojanida, Elder::9 Water-Plane
+Treant::8 Temperate-Forests
+Triton::2 Temperate-Aquatic
+Troglodyte::1 Underground
+Troll::5 Cold-Mountains
+Troll Hunter::11 Cold Mountains
+Unicorn::3 Temperate-Forests
+Unicorn, Celestial Charger::13 Chaotic-Good-Planes
+Vampire Spawn::4 Any
+Vargouille::2 Evil-Planes
+Wight::3 Any
+Will-o’-Wisp::6 Temperate-Marshes
+Winter Wolf::5 Cold-Forests
+Worg::2 Temperate-Plains
+Wraith::5 Any
+Wraith, Dread::11 Any
+Wyvern::6 Warm-Hills
+Xill::6 Ethereal-Plane
+Xorn, Minor::3 Earth-Plane
+Xorn, Average::6 Earth-Plane
+Xorn, ELder::8 Earth-Plane
+Yeth Hound::3 Evil-Planes
+Yrithak::9 Temperate-Marshes
