@@ -346,7 +346,7 @@ Mephit, Ooze::3 Water-Plane
 Mephit, Salt::3 Earth-Plane
 Mephit, Steam::3 Fire-Plane
 Mephit, Water::3 Water-Plane
-Merfolk:0.5 Temperate-Aquatic
+Merfolk::0.5 Temperate-Aquatic
 Mimic::4 Underground
 Minotaur::4 Underground
 Mohrg::8 Any
