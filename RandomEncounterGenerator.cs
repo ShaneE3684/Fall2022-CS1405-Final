@@ -13,7 +13,31 @@ class RandomEncounterGenerator
         string difficulty = "Normal";
         int userInput = 0;
 
-        Console.Clear();
+        //Read text file of monsters, and place into Dictionary list
+        Dictionary<string, List<string>> monsterList = new Dictionary<string, List<string>>();
+        string[] monsterStringList = File.ReadAllLines("DnD_Monster_List.txt");
+
+        string monsterName;
+              
+        foreach(string allMonsterInfo in monsterStringList)
+        {
+            string[] monsterSplit = allMonsterInfo.Split("::");
+
+            monsterName = monsterSplit[0];
+            string[] monsterInfo = monsterSplit[1].Split(" ");
+
+            monsterList[monsterName] = new List<string>();
+            monsterList[monsterName].Add(monsterInfo[0]);
+            monsterList[monsterName].Add(monsterInfo[1]);
+
+            Array.Clear(monsterSplit, 0, monsterSplit.Length);
+            Array.Clear(monsterInfo, 0, monsterInfo.Length);
+        }
+
+        Console.Write(monsterList);
+        Console.ReadKey();
+
+        //Console.Clear();
         //User Greeting
         Console.WriteLine("Hello. This program helps a DM to make a random encounter for their group.");
         Console.WriteLine("If you enter in the number of players in the group, the average ecl of the group, and the environment the group is in,");
@@ -26,7 +50,7 @@ class RandomEncounterGenerator
 
         do
         {
-            Console.Clear();
+            //Console.Clear();
             Console.WriteLine("Players: " + players);
             Console.WriteLine("Average Player ECL: " + averageECL);
             Console.WriteLine("Environmnet: " + environment);
@@ -46,7 +70,7 @@ class RandomEncounterGenerator
             switch(userInput)
             {
                 case 1:
-                    Console.Clear();
+                   // Console.Clear();
                     Console.WriteLine("Test Case 1");
 
                     Console.WriteLine("Press any key to continue.");
@@ -54,7 +78,7 @@ class RandomEncounterGenerator
                     break;
                 
                 case 2:
-                    Console.Clear();
+                   // Console.Clear();
                     Console.WriteLine("Test Case 2");
 
                     Console.WriteLine("Press any key to continue.");
@@ -62,7 +86,7 @@ class RandomEncounterGenerator
                     break;
                 
                 case 3:
-                    Console.Clear();
+                   // Console.Clear();
                     Console.WriteLine("Test Case 3");
 
                     Console.WriteLine("Press any key to continue.");
@@ -70,7 +94,7 @@ class RandomEncounterGenerator
                     break;
                 
                 case 4:
-                    Console.Clear();
+                   // Console.Clear();
                     Console.WriteLine("Test Case 4");
 
                     Console.WriteLine("Press any key to continue.");
@@ -78,7 +102,7 @@ class RandomEncounterGenerator
                     break;
                 
                 case 5:
-                    Console.Clear();
+                    //Console.Clear();
                     Console.WriteLine("Test Case 5");
 
                     Console.WriteLine("Press any key to continue.");
@@ -88,7 +112,7 @@ class RandomEncounterGenerator
 
         }while(userInput != 0);
 
-        Console.Clear();
+        //Console.Clear();
         Console.WriteLine("");
         Console.WriteLine("Thank you for using this program.");
     }
