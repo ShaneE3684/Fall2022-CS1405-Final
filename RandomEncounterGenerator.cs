@@ -11,9 +11,9 @@ class RandomEncounterGenerator
         int players = 0;
         double averageECL = 0.0;
         string environment = "All";
-        string difficulty = "Normal";
+        string difficulty = "Challenging";
         int userInput = 0;
-        string[] difficulties = {"Cake-Walk", "Very-Easy", "Easy", "Normal", "Hard", "Very-Hard", "Overwhelming"};
+        string[] difficulties = {"Cake-Walk", "Very-Easy", "Easy", "Medium", "Challenging", "Hard", "Very-Hard", "Overwhelming", "Impossible"};
 
         //Read text file of monsters, and place into Dictionary list
         Dictionary<string, List<string>> monsterList = new Dictionary<string, List<string>>();
@@ -53,6 +53,7 @@ class RandomEncounterGenerator
         Console.WriteLine("Hello. This program helps a DM to make a random encounter for their group.");
         Console.WriteLine("If you enter in the number of players in the group, the average ecl of the group, and the environment the group is in,");
         Console.WriteLine("this program will give you an encounter based on the difficulty you desire for the encounter.");
+        Console.WriteLine("This program does not incude enhanced or changed monsters in its list, such as skeletons, liches, or ghosts.");
         Console.WriteLine("");
         Console.WriteLine("");
         Console.WriteLine("Press and key to begin.");
@@ -72,7 +73,7 @@ class RandomEncounterGenerator
             Console.WriteLine("1) Enter the number of players (0 by default).");
             Console.WriteLine("2) Enter the average ECL of the players (0 by default).");
             Console.WriteLine("3) Choose an environment ('Any' by default).");
-            Console.WriteLine("4) Set the difficulty ('Normal' by default).");
+            Console.WriteLine("4) Set the difficulty ('Challenging' by default).");
             Console.WriteLine("5) Create an encounter (must have a valid value in player number and average ECL).");
             Console.WriteLine("0) Exit the program.");
 
@@ -103,10 +104,18 @@ class RandomEncounterGenerator
                 
                 case 5:
                     Console.Clear();
-                    Console.WriteLine("Test Case 5");
-
-                    Console.WriteLine("Press any key to continue.");
-                    Console.ReadKey();
+                    if(players <= 0 || averageECL <= 0)
+                    {
+                        Console.WriteLine("Please make sure you have entered a valid amount into the needed data fields");
+                        Console.WriteLine("The number of players and the average player ECL must be greater than 0.");
+                        Console.WriteLine("");
+                        Console.WriteLine("Press any key to continue.");
+                        Console.ReadKey();
+                    }
+                    else
+                    {
+                        CreatEncounter(players, averageECL, environment, difficulty, monsterList);
+                    }
                     break;
 
                 case 0:
@@ -126,18 +135,28 @@ class RandomEncounterGenerator
         Console.WriteLine("Thank you for using this program.");
     }
 
+
+
+
+
+
+    //Method to enter total number of players
     static void PlayerNumberEntry(ref int players)
     {
         Console.Write("Please enter the total number of players in the group:");
         players = int.Parse(Console.ReadLine());
     }
 
+
+    //Method to enter average ECL of players
     static void AverageECLEntry(ref double averageECL)
     {
         Console.Write("Please enter the average ECL of the players in the group:");
         averageECL = double.Parse(Console.ReadLine());
     }
 
+
+    //Method to enter the desired environment of the encounter
     static void EnvironmentEntry(ref string environment, List<string> allEnvironments)
     {
         do
@@ -156,6 +175,8 @@ class RandomEncounterGenerator
         }while(!allEnvironments.Contains(environment));
     }
 
+
+    //Method to enter in the desired difficulty level of the encounter
     static void SetDifficulty(ref string difficulty, string[] allDifficulties)
     {
         do
@@ -174,8 +195,18 @@ class RandomEncounterGenerator
         }while(!allDifficulties.Contains(difficulty));
     }
 
-     static void CreatEncounter()
+
+    //Method to create and display the monsters of the encounter, based on the data entered
+     static void CreatEncounter(int players, double ECL, string environment, string difficulty, Dictionary<string, List<string>> monsters)
     {
+        //Disclaimer about possible ridiculous groups of monsters.
+        Console.WriteLine("Disclaimer: Depending on the environment and difficulty,");
+        Console.WriteLine("this program may not make a typical group of monsters.");
+        Console.WriteLine("Any strange group of monsters is up to you as the DM to explain.");
+        Console.WriteLine("");
+        Console.WriteLine("Press any key to continue.");
+        Console.ReadKey();
+
 
     }
 
