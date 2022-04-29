@@ -25,7 +25,7 @@ Avoral::9 Good-Planes
 Azer::2 Fire-Plane
 Barghest::4 Evil-Planes
 Barghest, Greater::5 Evil-Planes
-Basilisk::5 Warm-Desserts
+Basilisk::5 Warm-Deserts
 Behir::8 Warm-Hills
 Belker::6 Air-Plane
 Blink Dog::2 Temperate-Plains

@@ -13,6 +13,7 @@ class RandomEncounterGenerator
         string environment = "All";
         string difficulty = "Normal";
         int userInput = 0;
+        string[] difficulties = {"Cake-Walk", "Very-Easy", "Easy", "Normal", "Hard", "Very-Hard", "Overwhelming"};
 
         //Read text file of monsters, and place into Dictionary list
         Dictionary<string, List<string>> monsterList = new Dictionary<string, List<string>>();
@@ -97,10 +98,7 @@ class RandomEncounterGenerator
                 
                 case 4:
                     Console.Clear();
-                    Console.WriteLine("Test Case 4");
-
-                    Console.WriteLine("Press any key to continue.");
-                    Console.ReadKey();
+                    SetDifficulty(ref difficulty, difficulties);
                     break;
                 
                 case 5:
@@ -142,19 +140,8 @@ class RandomEncounterGenerator
 
     static void EnvironmentEntry(ref string environment, List<string> allEnvironments)
     {
-        Console.WriteLine("Please enter the environment you would like from the list below.");
-        Console.WriteLine("Make sure to include any dashes or capital letters");
-        foreach(string setting in allEnvironments)
+        do
         {
-            Console.WriteLine(setting);
-        }
-        environment = Console.ReadLine();
-
-        //Check that the entry is valid
-        while(!allEnvironments.Contains(environment))
-        {
-            Console.Clear();
-            Console.WriteLine("That is not a valid entry.");
             Console.WriteLine("Please enter the environment you would like from the list below.");
             Console.WriteLine("Make sure to include any dashes or capital letters");
             foreach(string setting in allEnvironments)
@@ -162,12 +149,29 @@ class RandomEncounterGenerator
                 Console.WriteLine(setting);
             }
             environment = Console.ReadLine();
-        }
+            //Check that the entry is valid
+            Console.Clear();
+            if(!allEnvironments.Contains(environment))
+                Console.WriteLine("That is not a valid entry.");
+        }while(!allEnvironments.Contains(environment));
     }
 
-    static void SetDifficulty(ref string difficulty)
+    static void SetDifficulty(ref string difficulty, string[] allDifficulties)
     {
-
+        do
+        {
+            Console.WriteLine("Please enter the difficulty you would like from the list below.");
+            Console.WriteLine("Make sure to include any dashes or capital letters");
+            foreach(string setting in allDifficulties)
+            {
+                Console.WriteLine(setting);
+            }
+            difficulty = Console.ReadLine();
+            //Check that the entry is valid
+            Console.Clear();
+            if(!allDifficulties.Contains(difficulty))
+                Console.WriteLine("That is not a valid entry.");
+        }while(!allDifficulties.Contains(difficulty));
     }
 
      static void CreatEncounter()
