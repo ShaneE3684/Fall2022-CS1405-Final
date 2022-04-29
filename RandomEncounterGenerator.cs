@@ -7,6 +7,7 @@ class RandomEncounterGenerator
 {
     static void Main()
     {
+        //variable declaration
         int players = 0;
         double averageECL = 0.0;
         string environment = "All";
@@ -34,6 +35,16 @@ class RandomEncounterGenerator
             Array.Clear(monsterInfo, 0, monsterInfo.Length);
         }
 
+        //Get list of possible environments
+        List<string> possibleEnvironments = new List<string>();
+        foreach(var monster in monsterList)
+        {
+            string thisEnvironment = monster.Value[1];
+            if(!possibleEnvironments.Contains(thisEnvironment))
+                possibleEnvironments.Add(monster.Value[1]);
+        }
+        possibleEnvironments.Sort();
+
 
 
         Console.Clear();
@@ -59,12 +70,13 @@ class RandomEncounterGenerator
             Console.WriteLine("Please choose an option:");
             Console.WriteLine("1) Enter the number of players (0 by default).");
             Console.WriteLine("2) Enter the average ECL of the players (0 by default).");
-            Console.WriteLine("3) Choose an environment ('All' by default).");
+            Console.WriteLine("3) Choose an environment ('Any' by default).");
             Console.WriteLine("4) Set the difficulty ('Normal' by default).");
             Console.WriteLine("5) Create an encounter (must have a valid value in player number and average ECL).");
             Console.WriteLine("0) Exit the program.");
 
             userInput = int.Parse(Console.ReadLine());
+
 
             switch(userInput)
             {
@@ -80,10 +92,7 @@ class RandomEncounterGenerator
                 
                 case 3:
                     Console.Clear();
-                    Console.WriteLine("Test Case 3");
-
-                    Console.WriteLine("Press any key to continue.");
-                    Console.ReadKey();
+                    EnvironmentEntry(ref environment, possibleEnvironments);
                     break;
                 
                 case 4:
@@ -131,9 +140,29 @@ class RandomEncounterGenerator
         averageECL = double.Parse(Console.ReadLine());
     }
 
-    static void EnvironmentEntry(ref string environment)
+    static void EnvironmentEntry(ref string environment, List<string> allEnvironments)
     {
+        Console.WriteLine("Please enter the environment you would like from the list below.");
+        Console.WriteLine("Make sure to include any dashes or capital letters");
+        foreach(string setting in allEnvironments)
+        {
+            Console.WriteLine(setting);
+        }
+        environment = Console.ReadLine();
 
+        //Check that the entry is valid
+        while(!allEnvironments.Contains(environment))
+        {
+            Console.Clear();
+            Console.WriteLine("That is not a valid entry.");
+            Console.WriteLine("Please enter the environment you would like from the list below.");
+            Console.WriteLine("Make sure to include any dashes or capital letters");
+            foreach(string setting in allEnvironments)
+            {
+                Console.WriteLine(setting);
+            }
+            environment = Console.ReadLine();
+        }
     }
 
     static void SetDifficulty(ref string difficulty)

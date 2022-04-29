@@ -415,7 +415,7 @@ Swarm, Centipede::4 Underground
 Swarm, Hellwasp::8 Evil-Planes
 Swarm, Locust::3 Temperate-Plains
 Swarm, Rat::2 Any
-Swarm, Spider::1 Warm-Forest
+Swarm, Spider::1 Warm-Forests
 Tarrasque::20 Any
 Tendriculos::6 Temperate-Forests
 Thoqqua::2 Fire-Plane
@@ -427,7 +427,7 @@ Treant::8 Temperate-Forests
 Triton::2 Temperate-Aquatic
 Troglodyte::1 Underground
 Troll::5 Cold-Mountains
-Troll Hunter::11 Cold Mountains
+Troll Hunter::11 Cold-Mountains
 Unicorn::3 Temperate-Forests
 Unicorn, Celestial Charger::13 Chaotic-Good-Planes
 Vampire Spawn::4 Any
