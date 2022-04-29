@@ -70,7 +70,7 @@ class RandomEncounterGenerator
             {
                 case 1:
                     Console.Clear();
-                    Console.WriteLine("Test Case 1");
+                    PlayerNumberEntry(ref players);
 
                     Console.WriteLine("Press any key to continue.");
                     Console.ReadKey();
@@ -108,6 +108,8 @@ class RandomEncounterGenerator
                     Console.ReadKey();
                     break;
 
+                case 0:
+                    break;
                 default:
                     Console.Clear();
                     Console.WriteLine("That is not a valid input.");
@@ -123,14 +125,10 @@ class RandomEncounterGenerator
         Console.WriteLine("Thank you for using this program.");
     }
 
-    static void CreatEncounter()
+    static void PlayerNumberEntry(ref int players)
     {
-
-    }
-
-    static void PlayerNumberEntry()
-    {
-
+        Console.Write("Please enter the total number of players in the group:");
+        players = int.Parse(Console.ReadLine());
     }
 
     static void AverageECLEntry()
@@ -142,4 +140,10 @@ class RandomEncounterGenerator
     {
 
     }
+
+     static void CreatEncounter()
+    {
+
+    }
+
 }
