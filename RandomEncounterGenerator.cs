@@ -71,17 +71,11 @@ class RandomEncounterGenerator
                 case 1:
                     Console.Clear();
                     PlayerNumberEntry(ref players);
-
-                    Console.WriteLine("Press any key to continue.");
-                    Console.ReadKey();
                     break;
                 
                 case 2:
                     Console.Clear();
-                    Console.WriteLine("Test Case 2");
-
-                    Console.WriteLine("Press any key to continue.");
-                    Console.ReadKey();
+                    AverageECLEntry(ref averageECL);
                     break;
                 
                 case 3:
@@ -131,12 +125,18 @@ class RandomEncounterGenerator
         players = int.Parse(Console.ReadLine());
     }
 
-    static void AverageECLEntry()
+    static void AverageECLEntry(ref double averageECL)
+    {
+        Console.Write("Please enter the average ECL of the players in the group:");
+        averageECL = double.Parse(Console.ReadLine());
+    }
+
+    static void EnvironmentEntry(ref string environment)
     {
 
     }
 
-    static void EnvironmentEntry()
+    static void SetDifficulty(ref string difficulty)
     {
 
     }
