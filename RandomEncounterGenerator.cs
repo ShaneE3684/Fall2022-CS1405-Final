@@ -10,7 +10,7 @@ class RandomEncounterGenerator
         //variable declaration
         int players = 0;
         double averageECL = 0.0;
-        string environment = "All";
+        string environment = "Any";
         string difficulty = "Challenging";
         int userInput = 0;
         string[] difficulties = { "Cake-Walk", "Very-Easy", "Easy", "Medium", "Challenging", "Hard", "Very-Hard", "Overwhelming", "Impossible" };
@@ -57,7 +57,7 @@ class RandomEncounterGenerator
         Console.WriteLine("Note: This program does not incude enhanced or changed monsters in its list, such as skeletons, liches, or ghosts.");
         Console.WriteLine("");
         Console.WriteLine("");
-        Console.WriteLine("Press and key to begin.");
+        Console.WriteLine("Press any key to begin.");
         Console.ReadKey();
 
         do
@@ -201,7 +201,7 @@ class RandomEncounterGenerator
 
 
 
-    //Method to choose and display the monsters of the encounter, based on the data entered
+    //Method to choose and display the monsters in the encounter, based on the data entered by the user
     static void CreatEncounter(int players, double ECL, string environment, string difficulty, Dictionary<string, List<string>> monsters)
     {
         //Disclaimer about possible ridiculous groups of monsters.
@@ -215,22 +215,109 @@ class RandomEncounterGenerator
         //Get list of available monsters based on chosen environment
         List<string> possibleMonsters = new List<string>();
 
-        foreach (var monster in monsters.Keys.ToList())
+        possibleMonsters = GetPossibleMonsterList(monsters, environment);
+        int monsterLimit = 0;
+
+        //Test the CalculateEncounterDifficulty method.
+        Debug.Assert(CalculateEncounterDifficulty(4, 1, "Challenging", ref monsterLimit) == 1);
+        Debug.Assert(CalculateEncounterDifficulty(4, 4, "Medium", ref monsterLimit) == 3);
+        Debug.Assert(CalculateEncounterDifficulty(8, 20, "Impossible", ref monsterLimit) == 29);
+
+        //Get the encouter difficulty
+        double encounterDifficulty = CalculateEncounterDifficulty(players, ECL, difficulty, ref monsterLimit);
+
+        //Remove the monsters from the possible list that are too high of a difficulty level.
+        for (int i = 0; i < possibleMonsters.Count; i++)
         {
-            if (monsters[monster][1] == environment || monsters[monster][1] == "Any" || environment == "Any")
-                possibleMonsters.Add(monster);
+            if (double.Parse(monsters[possibleMonsters[i]][0]) > encounterDifficulty)
+            {
+                possibleMonsters.Remove(possibleMonsters[i]);
+                i--;
+            }
         }
 
 
-        //Calculate numerical difficulty of encounter based on difficulty level chosen.
-        double encounterDifficulty = 0;
-        int monsterLimit = 0;
-        double playerModifyer = (players / 4);
+        //Randomly choose monsters for the encounter from the available list, while adjusting the list of available monsters.
+        double currentDifficulty = 0.0;
+        var random = new Random();
+        int index = 0;
+        string currentMonster;
+        List<string> chosenMonsters = new List<string>();
+        int currentMonsters = 0;
+        while (currentMonsters < monsterLimit && currentDifficulty < encounterDifficulty - 0.1)
+        {
+
+            //Check monsters and remove those that have a difficulty that is too high.
+            for (int i = 0; i < possibleMonsters.Count; i++)
+            {
+                if (double.Parse(monsters[possibleMonsters[i]][0]) + currentDifficulty > encounterDifficulty)
+                {
+                    possibleMonsters.Remove(possibleMonsters[i]);
+                }
+            }
+
+            //Select the next monster to be put on the list.
+            index = random.Next(possibleMonsters.Count);
+            currentMonster = possibleMonsters[index];
+            if (monsterLimit == 1)
+            {
+                if (double.Parse(monsters[currentMonster][0]) == encounterDifficulty)
+                {
+                    chosenMonsters.Add(currentMonster);
+                    currentDifficulty = currentDifficulty + double.Parse(monsters[currentMonster][0]);
+                    currentMonsters++;
+                }
+                else
+                { }
+            }
+            else
+            {
+                if ((double.Parse(monsters[currentMonster][0]) < encounterDifficulty) && ((currentDifficulty + double.Parse(monsters[currentMonster][0])) <= encounterDifficulty))
+                {
+                    chosenMonsters.Add(currentMonster);
+                    currentDifficulty = currentDifficulty + double.Parse(monsters[currentMonster][0]);
+                    currentMonsters++;
+                }
+                else if (currentDifficulty + double.Parse(monsters[currentMonster][0]) < encounterDifficulty - 1)
+                {
+                    chosenMonsters.Add(currentMonster);
+                    currentMonsters++;
+                }
+                else
+                { }
+            }
+            if (possibleMonsters.Count == 0)
+                break;
+        }
+
+        //Display the chosen monsters to the user.
+        Console.Clear();
+        Console.WriteLine("");
+        Console.WriteLine("Here is the list of chosen monsters for the encounter.");
+        Console.WriteLine("");
+        foreach (string monster in chosenMonsters)
+        {
+            Console.WriteLine(monster);
+        }
+        Console.WriteLine("");
+
+        Console.WriteLine("Press any key to go back to the menu.");
+        Console.ReadKey();
+    }
+
+
+    //Calculate numerical difficulty of encounter based on difficulty level chosen, total players, and average ECL.
+    static double CalculateEncounterDifficulty(int totalPlayers, double ECL, string difficulty, ref int monsterLimit)
+    {
+        double encounterDifficulty = 0.0;
+        double playerModifyer = (totalPlayers / 4);
         if (playerModifyer < 0.5)
+        {
             playerModifyer = 0.5;
+        }
         switch (difficulty)
         {
-            case "Cakewalk":
+            case "Cake-Walk":
                 encounterDifficulty = (ECL - 4) + (playerModifyer - 1);
                 monsterLimit = 1;
                 if (encounterDifficulty < 0)
@@ -244,7 +331,7 @@ class RandomEncounterGenerator
                 monsterLimit = 4;
                 if (encounterDifficulty < 0)
                 {
-                    encounterDifficulty = 0.75;
+                    encounterDifficulty = 0.8;
                 }
                 break;
 
@@ -253,7 +340,7 @@ class RandomEncounterGenerator
                 monsterLimit = 5;
                 if (encounterDifficulty < 0)
                 {
-                    encounterDifficulty = 0.85;
+                    encounterDifficulty = 0.95;
                 }
                 break;
 
@@ -291,75 +378,17 @@ class RandomEncounterGenerator
                 monsterLimit = 2;
                 break;
         }
+        return encounterDifficulty;
+    }
 
-        //Remove the monsters from the possible list that are too high of a difficulty level.
-        for (int i = 0; i < possibleMonsters.Count; i++)
+    static List<string> GetPossibleMonsterList (Dictionary<string, List<string>> allMonsters, string chosenEnvironment)
+    {
+        List<string> monsterList = new List<string>();
+        foreach (var monster in allMonsters.Keys.ToList())
         {
-            if (double.Parse(monsters[possibleMonsters[i]][0]) > encounterDifficulty)
-            {
-                possibleMonsters.Remove(possibleMonsters[i]);
-                i--;
-            }
+            if (allMonsters[monster][1] == chosenEnvironment || allMonsters[monster][1] == "Any" || chosenEnvironment == "Any")
+                monsterList.Add(monster);
         }
-
-
-        //Randomly choose monsters for the encounter from the available list, while adjusting the list of available monsters.
-        double currentDifficulty = 0.0;
-        var random = new Random();
-        int index = 0;
-        string currentMonster;
-        List<string> chosenMonsters = new List<string>();
-        while (monsterLimit > 0 && currentDifficulty < encounterDifficulty)
-        {
-
-            //Check monsters and remove those that have a difficulty that is too high.
-            for (int i = 0; i < possibleMonsters.Count; i++)
-            {
-                if (double.Parse(monsters[possibleMonsters[i]][0]) + currentDifficulty > encounterDifficulty)
-                {
-                    possibleMonsters.Remove(possibleMonsters[i]);
-                }
-            }
-
-            //Select the next monster to be put on the list.
-            index = random.Next(possibleMonsters.Count);
-            currentMonster = possibleMonsters[index];
-            if (monsterLimit == 1)
-            {
-                if (double.Parse(monsters[currentMonster][0]) == encounterDifficulty)
-                {
-                    chosenMonsters.Add(currentMonster);
-                    currentDifficulty = currentDifficulty + double.Parse(monsters[currentMonster][0]);
-                }
-                else
-                { }
-            }
-            else
-            {
-                if ((double.Parse(monsters[currentMonster][0]) < encounterDifficulty) && ((currentDifficulty + double.Parse(monsters[currentMonster][0])) < encounterDifficulty))
-                {
-                    chosenMonsters.Add(currentMonster);
-                    currentDifficulty = currentDifficulty + double.Parse(monsters[currentMonster][0]);
-                }
-                else if (currentDifficulty + double.Parse(monsters[currentMonster][0]) < encounterDifficulty - 1)
-                { chosenMonsters.Add(currentMonster); }
-                else
-                { }
-            }
-            if (possibleMonsters.Count == 0)
-                break;
-        }
-
-        //Display the chosen monsters to the user.
-        Console.WriteLine("Here is the list of chosen monsters for the encounter.");
-        Console.WriteLine("");
-        foreach (string monster in chosenMonsters)
-        {
-            Console.WriteLine(monster);
-        }
-        Console.WriteLine("");
-
-        Console.WriteLine("Press and key to go back to the menu.");
-        Console.ReadKey();
+        return monsterList;
     }
 }
