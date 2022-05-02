@@ -13,15 +13,15 @@ class RandomEncounterGenerator
         string environment = "All";
         string difficulty = "Challenging";
         int userInput = 0;
-        string[] difficulties = {"Cake-Walk", "Very-Easy", "Easy", "Medium", "Challenging", "Hard", "Very-Hard", "Overwhelming", "Impossible"};
+        string[] difficulties = { "Cake-Walk", "Very-Easy", "Easy", "Medium", "Challenging", "Hard", "Very-Hard", "Overwhelming", "Impossible" };
 
         //Read text file of monsters, and place into Dictionary list
         Dictionary<string, List<string>> monsterList = new Dictionary<string, List<string>>();
         string[] monsterStringList = File.ReadAllLines("DnD_Monster_List.txt");
 
         string monsterName;
-              
-        foreach(string allMonsterInfo in monsterStringList)
+
+        foreach (string allMonsterInfo in monsterStringList)
         {
             string[] monsterSplit = allMonsterInfo.Split("::");
 
@@ -38,10 +38,10 @@ class RandomEncounterGenerator
 
         //Get list of possible environments
         List<string> possibleEnvironments = new List<string>();
-        foreach(var monster in monsterList)
+        foreach (var monster in monsterList)
         {
             string thisEnvironment = monster.Value[1];
-            if(!possibleEnvironments.Contains(thisEnvironment))
+            if (!possibleEnvironments.Contains(thisEnvironment))
                 possibleEnvironments.Add(monster.Value[1]);
         }
         possibleEnvironments.Sort();
@@ -53,11 +53,11 @@ class RandomEncounterGenerator
         Console.WriteLine("Hello. This program helps a DM to make a random encounter for their group.");
         Console.WriteLine("If you enter in the number of players in the group, the average ecl of the group, and the environment the group is in,");
         Console.WriteLine("this program will give you an encounter based on the difficulty you desire for the encounter.");
-        Console.WriteLine("This program does not incude enhanced or changed monsters in its list, such as skeletons, liches, or ghosts.");
+        Console.WriteLine("This program works best when all players are at least near the same ECL, and only gives the names of the monsters in the encounter.");
+        Console.WriteLine("Note: This program does not incude enhanced or changed monsters in its list, such as skeletons, liches, or ghosts.");
         Console.WriteLine("");
         Console.WriteLine("");
         Console.WriteLine("Press and key to begin.");
-
         Console.ReadKey();
 
         do
@@ -80,31 +80,31 @@ class RandomEncounterGenerator
             userInput = int.Parse(Console.ReadLine());
 
 
-            switch(userInput)
+            switch (userInput)
             {
                 case 1:
                     Console.Clear();
                     PlayerNumberEntry(ref players);
                     break;
-                
+
                 case 2:
                     Console.Clear();
                     AverageECLEntry(ref averageECL);
                     break;
-                
+
                 case 3:
                     Console.Clear();
                     EnvironmentEntry(ref environment, possibleEnvironments);
                     break;
-                
+
                 case 4:
                     Console.Clear();
                     SetDifficulty(ref difficulty, difficulties);
                     break;
-                
+
                 case 5:
                     Console.Clear();
-                    if(players <= 0 || averageECL <= 0)
+                    if (players <= 0 || averageECL <= 0)
                     {
                         Console.WriteLine("Please make sure you have entered a valid amount into the needed data fields");
                         Console.WriteLine("The number of players and the average player ECL must be greater than 0.");
@@ -123,12 +123,13 @@ class RandomEncounterGenerator
                 default:
                     Console.Clear();
                     Console.WriteLine("That is not a valid input.");
+                    Console.WriteLine("");
                     Console.WriteLine("Press any key to continue.");
                     Console.ReadKey();
                     break;
             }
 
-        }while(userInput != 0);
+        } while (userInput != 0);
 
         Console.Clear();
         Console.WriteLine("");
@@ -163,16 +164,18 @@ class RandomEncounterGenerator
         {
             Console.WriteLine("Please enter the environment you would like from the list below.");
             Console.WriteLine("Make sure to include any dashes or capital letters");
-            foreach(string setting in allEnvironments)
+            foreach (string setting in allEnvironments)
             {
                 Console.WriteLine(setting);
             }
+            Console.WriteLine("");
             environment = Console.ReadLine();
             //Check that the entry is valid
             Console.Clear();
-            if(!allEnvironments.Contains(environment))
+            if (!allEnvironments.Contains(environment))
                 Console.WriteLine("That is not a valid entry.");
-        }while(!allEnvironments.Contains(environment));
+            Console.WriteLine("");
+        } while (!allEnvironments.Contains(environment));
     }
 
 
@@ -183,21 +186,23 @@ class RandomEncounterGenerator
         {
             Console.WriteLine("Please enter the difficulty you would like from the list below.");
             Console.WriteLine("Make sure to include any dashes or capital letters");
-            foreach(string setting in allDifficulties)
+            foreach (string setting in allDifficulties)
             {
                 Console.WriteLine(setting);
             }
             difficulty = Console.ReadLine();
             //Check that the entry is valid
             Console.Clear();
-            if(!allDifficulties.Contains(difficulty))
+            if (!allDifficulties.Contains(difficulty))
                 Console.WriteLine("That is not a valid entry.");
-        }while(!allDifficulties.Contains(difficulty));
+            Console.WriteLine("");
+        } while (!allDifficulties.Contains(difficulty));
     }
 
 
-    //Method to create and display the monsters of the encounter, based on the data entered
-     static void CreatEncounter(int players, double ECL, string environment, string difficulty, Dictionary<string, List<string>> monsters)
+
+    //Method to choose and display the monsters of the encounter, based on the data entered
+    static void CreatEncounter(int players, double ECL, string environment, string difficulty, Dictionary<string, List<string>> monsters)
     {
         //Disclaimer about possible ridiculous groups of monsters.
         Console.WriteLine("Disclaimer: Depending on the environment and difficulty,");
@@ -207,7 +212,154 @@ class RandomEncounterGenerator
         Console.WriteLine("Press any key to continue.");
         Console.ReadKey();
 
+        //Get list of available monsters based on chosen environment
+        List<string> possibleMonsters = new List<string>();
 
+        foreach (var monster in monsters.Keys.ToList())
+        {
+            if (monsters[monster][1] == environment || monsters[monster][1] == "Any" || environment == "Any")
+                possibleMonsters.Add(monster);
+        }
+
+
+        //Calculate numerical difficulty of encounter based on difficulty level chosen.
+        double encounterDifficulty = 0;
+        int monsterLimit = 0;
+        double playerModifyer = (players / 4);
+        if (playerModifyer < 0.5)
+            playerModifyer = 0.5;
+        switch (difficulty)
+        {
+            case "Cakewalk":
+                encounterDifficulty = (ECL - 4) + (playerModifyer - 1);
+                monsterLimit = 1;
+                if (encounterDifficulty < 0)
+                {
+                    encounterDifficulty = 0.5;
+                }
+                break;
+
+            case "Very-Easy":
+                encounterDifficulty = ECL - 3 + (playerModifyer - 1);
+                monsterLimit = 4;
+                if (encounterDifficulty < 0)
+                {
+                    encounterDifficulty = 0.75;
+                }
+                break;
+
+            case "Easy":
+                encounterDifficulty = ECL - 2 + (playerModifyer - 1);
+                monsterLimit = 5;
+                if (encounterDifficulty < 0)
+                {
+                    encounterDifficulty = 0.85;
+                }
+                break;
+
+            case "Medium":
+                encounterDifficulty = ECL - 1 + (playerModifyer - 1);
+                monsterLimit = 200;
+                if (encounterDifficulty < 0)
+                {
+                    encounterDifficulty = 1;
+                }
+                break;
+
+            case "Challenging":
+                encounterDifficulty = ECL + (playerModifyer - 1);
+                monsterLimit = 200;
+                break;
+
+            case "Hard":
+                encounterDifficulty = ECL + 1 + (playerModifyer - 1);
+                monsterLimit = 2;
+                break;
+
+            case "Very-Hard":
+                encounterDifficulty = ECL + 3 + (playerModifyer - 1);
+                monsterLimit = 4;
+                break;
+
+            case "Overwhelming":
+                encounterDifficulty = ECL + 5 + (playerModifyer - 1);
+                monsterLimit = 3;
+                break;
+
+            case "Impossible":
+                encounterDifficulty = ECL + 8 + (playerModifyer - 1);
+                monsterLimit = 2;
+                break;
+        }
+
+        //Remove the monsters from the possible list that are too high of a difficulty level.
+        for (int i = 0; i < possibleMonsters.Count; i++)
+        {
+            if (double.Parse(monsters[possibleMonsters[i]][0]) > encounterDifficulty)
+            {
+                possibleMonsters.Remove(possibleMonsters[i]);
+                i--;
+            }
+        }
+
+
+        //Randomly choose monsters for the encounter from the available list, while adjusting the list of available monsters.
+        double currentDifficulty = 0.0;
+        var random = new Random();
+        int index = 0;
+        string currentMonster;
+        List<string> chosenMonsters = new List<string>();
+        while (monsterLimit > 0 && currentDifficulty < encounterDifficulty)
+        {
+
+            //Check monsters and remove those that have a difficulty that is too high.
+            for (int i = 0; i < possibleMonsters.Count; i++)
+            {
+                if (double.Parse(monsters[possibleMonsters[i]][0]) + currentDifficulty > encounterDifficulty)
+                {
+                    possibleMonsters.Remove(possibleMonsters[i]);
+                }
+            }
+
+            //Select the next monster to be put on the list.
+            index = random.Next(possibleMonsters.Count);
+            currentMonster = possibleMonsters[index];
+            if (monsterLimit == 1)
+            {
+                if (double.Parse(monsters[currentMonster][0]) == encounterDifficulty)
+                {
+                    chosenMonsters.Add(currentMonster);
+                    currentDifficulty = currentDifficulty + double.Parse(monsters[currentMonster][0]);
+                }
+                else
+                { }
+            }
+            else
+            {
+                if ((double.Parse(monsters[currentMonster][0]) < encounterDifficulty) && ((currentDifficulty + double.Parse(monsters[currentMonster][0])) < encounterDifficulty))
+                {
+                    chosenMonsters.Add(currentMonster);
+                    currentDifficulty = currentDifficulty + double.Parse(monsters[currentMonster][0]);
+                }
+                else if (currentDifficulty + double.Parse(monsters[currentMonster][0]) < encounterDifficulty - 1)
+                { chosenMonsters.Add(currentMonster); }
+                else
+                { }
+            }
+            if (possibleMonsters.Count == 0)
+                break;
+        }
+
+        //Display the chosen monsters to the user.
+        Console.WriteLine("Here is the list of chosen monsters for the encounter.");
+        Console.WriteLine("");
+        foreach (string monster in chosenMonsters)
+        {
+            Console.WriteLine(monster);
+        }
+        Console.WriteLine("");
+
+        Console.WriteLine("Press and key to go back to the menu.");
+        Console.ReadKey();
     }
-
 }
