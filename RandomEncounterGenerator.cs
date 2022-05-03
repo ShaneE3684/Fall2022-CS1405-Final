@@ -236,6 +236,16 @@ class RandomEncounterGenerator
             }
         }
 
+        //Remove the monsters from the possible list that are too low of a difficulty level.
+        for (int i = 0; i < possibleMonsters.Count; i++)
+        {
+            if (double.Parse(monsters[possibleMonsters[i]][0]) < ECL - 10)
+            {
+                possibleMonsters.Remove(possibleMonsters[i]);
+                i--;
+            }
+        }
+
 
         //Randomly choose monsters for the encounter from the available list, while adjusting the list of available monsters.
         double currentDifficulty = 0.0;
@@ -255,7 +265,10 @@ class RandomEncounterGenerator
                     possibleMonsters.Remove(possibleMonsters[i]);
                 }
             }
-
+            if(possibleMonsters.Count == 0)
+            {
+                break;
+            }
             //Select the next monster to be put on the list.
             index = random.Next(possibleMonsters.Count);
             currentMonster = possibleMonsters[index];
@@ -360,22 +373,22 @@ class RandomEncounterGenerator
 
             case "Hard":
                 encounterDifficulty = ECL + 1 + (playerModifyer - 1);
-                monsterLimit = 2;
+                monsterLimit = 5;
                 break;
 
             case "Very-Hard":
                 encounterDifficulty = ECL + 3 + (playerModifyer - 1);
-                monsterLimit = 4;
+                monsterLimit = 10;
                 break;
 
             case "Overwhelming":
                 encounterDifficulty = ECL + 5 + (playerModifyer - 1);
-                monsterLimit = 3;
+                monsterLimit = 8;
                 break;
 
             case "Impossible":
                 encounterDifficulty = ECL + 8 + (playerModifyer - 1);
-                monsterLimit = 2;
+                monsterLimit = 5;
                 break;
         }
         return encounterDifficulty;
