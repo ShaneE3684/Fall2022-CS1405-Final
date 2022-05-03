@@ -212,16 +212,23 @@ class RandomEncounterGenerator
         Console.WriteLine("Press any key to continue.");
         Console.ReadKey();
 
+        //Test the GetPossibleMonsterList method
+        Debug.Assert(GetPossibleMonsterList(monsters, "Limbo").Count == 34);
+        Debug.Assert(GetPossibleMonsterList(monsters, "Underground").Count == 60);
+        Debug.Assert(GetPossibleMonsterList(monsters, "Air-Plane").Count == 49);
+        Debug.Assert(GetPossibleMonsterList(monsters, "Any").Count == 447);
+
+
         //Get list of available monsters based on chosen environment
         List<string> possibleMonsters = new List<string>();
-
+        
         possibleMonsters = GetPossibleMonsterList(monsters, environment);
         int monsterLimit = 0;
 
         //Test the CalculateEncounterDifficulty method.
         Debug.Assert(CalculateEncounterDifficulty(4, 1, "Challenging", ref monsterLimit) == 1);
         Debug.Assert(CalculateEncounterDifficulty(4, 4, "Medium", ref monsterLimit) == 3);
-        Debug.Assert(CalculateEncounterDifficulty(8, 20, "Impossible", ref monsterLimit) == 29);
+        Debug.Assert(CalculateEncounterDifficulty(8, 20, "Impossible", ref monsterLimit) == 49);
 
         //Get the encouter difficulty
         double encounterDifficulty = CalculateEncounterDifficulty(players, ECL, difficulty, ref monsterLimit);
@@ -372,22 +379,22 @@ class RandomEncounterGenerator
                 break;
 
             case "Hard":
-                encounterDifficulty = ECL + 1 + (playerModifyer - 1);
+                encounterDifficulty = (ECL * 1.25) + 1 + (playerModifyer - 1);
                 monsterLimit = 5;
                 break;
 
             case "Very-Hard":
-                encounterDifficulty = ECL + 3 + (playerModifyer - 1);
+                encounterDifficulty = (ECL * 1.5) + 3 + (playerModifyer - 1);
                 monsterLimit = 10;
                 break;
 
             case "Overwhelming":
-                encounterDifficulty = ECL + 5 + (playerModifyer - 1);
+                encounterDifficulty = (ECL * 1.75) + 5 + (playerModifyer - 1);
                 monsterLimit = 8;
                 break;
 
             case "Impossible":
-                encounterDifficulty = ECL + 8 + (playerModifyer - 1);
+                encounterDifficulty = (ECL * 2) + 8 + (playerModifyer - 1);
                 monsterLimit = 5;
                 break;
         }
