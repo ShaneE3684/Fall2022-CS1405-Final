@@ -213,10 +213,10 @@ class RandomEncounterGenerator
         Console.ReadKey();
 
         //Test the GetPossibleMonsterList method
-        Debug.Assert(GetPossibleMonsterList(monsters, "Limbo").Count == 34);
-        Debug.Assert(GetPossibleMonsterList(monsters, "Underground").Count == 60);
-        Debug.Assert(GetPossibleMonsterList(monsters, "Air-Plane").Count == 49);
-        Debug.Assert(GetPossibleMonsterList(monsters, "Any").Count == 447);
+        Debug.Assert(GetPossibleMonsterList(monsters, "Limbo").Count == 35);
+        Debug.Assert(GetPossibleMonsterList(monsters, "Underground").Count == 68);
+        Debug.Assert(GetPossibleMonsterList(monsters, "Air-Plane").Count == 50);
+        Debug.Assert(GetPossibleMonsterList(monsters, "Any").Count == 538);
 
 
         //Get list of available monsters based on chosen environment

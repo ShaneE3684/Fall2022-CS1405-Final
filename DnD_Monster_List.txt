@@ -445,3 +445,94 @@ Xorn, Average::6 Earth-Plane
 Xorn, ELder::8 Earth-Plane
 Yeth Hound::3 Evil-Planes
 Yrithak::9 Temperate-Marshes
+Ape::2 Warm-Forests
+Baboon::0.5 Warm-Plains
+Badger::0.5 Temperate-Forests
+Bat::0.1 Temperate-Deserts
+Bear, Black::2 Temperate-Forests
+Bear, Brown::4 Cold-Forests
+Bear, Polar::4 Cold-Plains
+Bison::2 Temperate-Plains
+Boar::2 Temperate-Forests
+Camel::1 Warm-Deserts
+Cat::0.25 Temperate-Forests
+Cheetah::2 Warm-Plains
+Crocodile::2 Warm-Marshes
+Crocodile, Giant::4 Warm-Marshes
+Dog::0.333333 Temperate-Plains
+Dog, Riding::1 Temperate-Plains
+Donkey::0.2 Temperate-Deserts
+Eagle::0.5 Temperate-Mountains
+Elephant::7 Warm-Plains
+Hawk::0.333333 Temperate-Forests
+Horse, Heavy::1 Temperate-Plains
+Horse, Light::1 Temperate-Plains
+Horse, War, Heavy::2 Temperate-Plains
+Horse, War, Light::1 Temperate-Plains
+Hyena::1 Warm-Deserts
+Leopard::2 Warm-Forests
+Lion::3 Warm-Plains
+Lizard::0.1 Warm-Forests
+Lizard, Monitor::2 Warm-Forests
+Manta Ray::1 Warm-Aquatic
+Monkey::0.2 Warm-Forests
+Mule::1 Warm-Plains
+Octopus::1 Warm-Aquatic
+Octopus, Giant::8 Warm-Aquatic
+Owl::0.25 Temperate-Forests
+Pony::0.25 Temperate-Plains
+Pony, War::0.5 Temperate-Plains
+Porpoise::0.5 Temperate-Aquatic
+Rat::0.125 Any
+Raven::0.2 Temperate-Forests
+Rhinoceros::4 Warm-Plains
+Shark, Medium::1 Cold-Aquatic
+Shark, Large::2 Cold-Aquatic
+Shark, Huge::4 Cold-Aquatic
+Snake, Constrictor::2 Warm-Forests
+Snake, Constrictor, Giant::5 Warm-Forests
+Snake, Viper, Tiny::0.333333 Temperate-Marshes
+Snake, Viper, Small::0.5 Temperate-Marshes
+Snake, Viper, Medium::1 Temperate-Marshes
+Snake, Viper, Large::2 Temperate-Marshes
+Snake, Viper, Huge::3 Temperate-Marshes
+Squid::1 Temperate-Aquatic
+Squid, Giant::9 Temperate-Aquatic
+Tiger::4 Warm-Forests
+Toad::0.1 Temperate-Marshes
+Weasel::0.25 Temperate-Hills
+Whale, Baleen::6 Warm-Aquatic
+Whale, Cachalot::7 Temperate-Aquatic
+Whale, Orca::5 Cold-Aquatic
+Wolf::1 Temperate-Forests
+Wolverine::2 Cold-Forests
+Gaint Ant, Worker::1 Temperate-Plains
+Gaint Ant, Soldier::2 Temperate-Plains
+Gaint Ant, Queen::2 Temperate-Plains
+Giant Bee::1 Temperate-Plains
+Gaint Bombardier Beetle::2 Warm-Forests
+Giant Fire Beetle::0.333333 Warm-Plains
+Giant Stag Beetle::4 Temperate-Forests
+Giant Praying Mantis::3 Temperate-Forests
+Giant Wasp::3 Temperate-Forests
+Monstrous Centipede, Tiny::0.125 Underground
+Monstrous Centipede, Small::0.25 Underground
+Monstrous Centipede, Medium::0.5 Underground
+Monstrous Centipede, Large::1 Underground
+Monstrous Centipede, Huge::2 Underground
+Monstrous Centipede, Gargantuan::6 Underground
+Monstrous Centipede, Colossal::9 Underground
+Monstrous Scorpion, Tiny::0.25 Warm-Deserts
+Monstrous Scorpion, Small::0.5 Warm-Deserts
+Monstrous Scorpion, Medium::1 Warm-Deserts
+Monstrous Scorpion, Large::3 Warm-Deserts
+Monstrous Scorpion, Huge::7 Warm-Deserts
+Monstrous Scorpion, Gargantuan::10 Warm-Deserts
+Monstrous Scorpion, Colossal::12 Warm-Deserts
+Monstrous Spider, Tiny::0.25 Temperate-Forests
+Monstrous Spider, Small::0.5 Temperate-Forests
+Monstrous Spider, Medium::1 Temperate-Forests
+Monstrous Spider, Large::2 Temperate-Forests
+Monstrous Spider, Huge::5 Temperate-Forests
+Monstrous Spider, Gargantuan::8 Temperate-Forests
+Monstrous Spider, Colossal::11 Temperate-Forests
